@@ -1,4 +1,4 @@
-/*
+ /*
  * This program should sort a linked by increasing value using bubble sort,
  * but it's currently broken.  Use GDB and Valgrind to help debug it.
  */
@@ -39,7 +39,7 @@ void bubble_sort(struct link* head) {
     do {
       struct link* curr = head;
       swapped = 0;
-      while (curr != NULL) {
+      while (curr->next != NULL) {
         if (curr->val > curr->next->val) {
           swap(&curr->val, &curr->next->val);
           swapped = 1;
